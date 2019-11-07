@@ -5,7 +5,19 @@
 // 輸出說明: 請直接console.log出是否合法
 
 let checkId = function (id: string) {
-
+    if (id.length > 6) {
+        console.log('不合法');
+    } else {
+        let number1 = Number.parseInt(id.substr(0, 1));
+        let number2 = Number.parseInt(id.substr(1, 1));
+        let number3 = Number.parseInt(id.substr(2, 1));
+        let numberSum = (number1 * 10) + (number2 * 9) + (number3 * 8);
+        if (numberSum % 5 === 0) {
+            console.log('合法');
+        } else {
+            console.log('不合法');
+        }
+    }
 }
 
 checkId('425') // 不合法

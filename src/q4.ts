@@ -6,9 +6,18 @@
 
 
 let calc = function (calcString: string) {
-
+    let numberA = Number.parseInt(calcString.substr(0, 1));
+    let numberB = Number.parseInt(calcString.substr(2, 1));
+    if (calcString.includes('*')) {
+        console.log(numberA * numberB);
+    } else if (calcString.includes('+')) {
+        console.log(numberA + numberB);
+    } else if (calcString.includes('/')) {
+        console.log(numberA / numberB);
+    } else if (calcString.includes('-')) {
+        console.log(numberA - numberB);
+    }
 }
-
 calc('8*2')
 calc('1+1')
 calc('5/5')
